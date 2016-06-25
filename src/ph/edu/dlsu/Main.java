@@ -186,15 +186,34 @@ public class Main extends Application{
         //with violation, with number
         else {
             System.out.println("Violation and number is detected");
-            if (violation.getValue() == "Speeding") {
+
                 Boolean found = false;
+
+                int sheetNumber = 0;
+
+                if (violation.getValue() == "Speeding") {
+                    sheetNumber = 0;
+                }
+                else if (violation.getValue() == "Swerving"){
+                    sheetNumber = 1;
+                }
+                else if (violation.getValue() == "Drunk Driving"){
+                    sheetNumber = 2;
+                }
+                else if (violation.getValue() == "Counterflowing"){
+                    sheetNumber = 3;
+                }
+                else if (violation.getValue() == "Beating the red light"){
+                    sheetNumber = 4;
+                }
 
                 File myFile = new File("dat/Violation-Database.xlsx");
 
                 FileInputStream fis = new FileInputStream(myFile);
 
                 XSSFWorkbook myWorkBook = new XSSFWorkbook(fis);
-                XSSFSheet mySheet = myWorkBook.getSheetAt(0);
+
+                XSSFSheet mySheet = myWorkBook.getSheetAt(sheetNumber);
 
                 Iterator<Row> rowIterator = mySheet.iterator();
                 //Traverse each row
@@ -206,7 +225,7 @@ public class Main extends Application{
                     Cell cell = cellIterator.next();
                     if (cell.getStringCellValue().equals(plate.getText())){
                         while (cellIterator.hasNext()) {
-                            System.out.println("Violation       : Speeding");
+                            System.out.println("Violation       : " + violation.getValue());
                             System.out.println("Plate Number    : " + cell.getStringCellValue());
                             cell = cellIterator.next();
                             System.out.println("Vehicle Class   : " + cell.getStringCellValue());
@@ -222,18 +241,9 @@ public class Main extends Application{
                     }
                 }
                 if (!found){
-                    System.out.println("Plate number does not found in the list of speeding violators.");
+                    System.out.println("Plate number does not found in the list of " + violation.getValue() + " violators.");
                 }
-            }
-            else if (violation.getValue() == "Drunk Driving") {
 
-            }
-            else if (violation.getValue() == "Counterflowing") {
-
-            }
-            else if (violation.getValue() == "Beating the red light") {
-
-            }
         }
     }
 
