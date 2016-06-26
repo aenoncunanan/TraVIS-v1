@@ -3,8 +3,10 @@ package ph.edu.dlsu;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
@@ -51,8 +53,38 @@ public class About {
         message.setTextAlignment(TextAlignment.CENTER);
         grid.add(message, 0, 1);
 
+        Button speakBtn = new Button("speak");
+        HBox speakHBox = new HBox();
+        speakHBox.setAlignment(Pos.BOTTOM_RIGHT);
+        speakHBox.getChildren().add(speakBtn);
+        grid.add(speakHBox, 0, 2);
+
         grid.setTranslateX(420);
         grid.setTranslateY(325);
+
+//        speakBtn.setOnAction(event -> {
+//            InputStream sound = null;
+//
+//
+//                Audio audio = Audio.getInstance();
+//            try {
+//                sound = audio.getAudio("Hello World", Language.ENGLISH);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//            try {
+//                audio.play(sound);
+//            } catch (JavaLayerException e) {
+//                e.printStackTrace();
+//            }
+//            try {
+//                sound.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//
+//
+//        });
 
         final CustomMenuItem home = new CustomMenuItem("home");
         final CustomMenuItem facts = new CustomMenuItem("facts");

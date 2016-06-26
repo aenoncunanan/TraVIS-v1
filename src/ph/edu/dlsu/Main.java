@@ -24,7 +24,6 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.opencv.core.Core;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -57,7 +56,7 @@ public class Main extends Application{
     }
 
     private void initializeScreenSize() {
-        ScreenSize screen = new ScreenSize();
+        ph.edu.dlsu.ScreenSize screen = new ph.edu.dlsu.ScreenSize();
         displayWidth = screen.getDisplayWidth();
         displayHeight = screen.getDisplayHeight();
     }
@@ -67,9 +66,9 @@ public class Main extends Application{
         Pane rootNode = new Pane();
         rootNode.setPrefSize(displayWidth, displayHeight);
 
-        MenuHBox menuBox;
+        ph.edu.dlsu.MenuHBox menuBox;
 
-        ImageView imgBackground = Utils.loadImage2View("res/TraVIS.jpg", displayWidth, displayHeight);
+        ImageView imgBackground = ph.edu.dlsu.Utils.loadImage2View("res/TraVIS.jpg", displayWidth, displayHeight);
         if(imgBackground != null){
             rootNode.getChildren().add(imgBackground);
         }
@@ -99,7 +98,7 @@ public class Main extends Application{
             onExit();
         });
 
-        menuBox = new MenuHBox(about, facts, update, close);
+        menuBox = new ph.edu.dlsu.MenuHBox(about, facts, update, close);
 //        menuBox.setTranslateX(725); //Use this if menus are to be located beside the school logo
         menuBox.setTranslateX(485);
         menuBox.setTranslateY(630);
@@ -139,7 +138,7 @@ public class Main extends Application{
             }
         });
 
-        grid.setTranslateX(420);
+        grid.setTranslateX(455);
         grid.setTranslateY(325);
 
         Label updateMessage = new Label();
@@ -255,7 +254,7 @@ public class Main extends Application{
     }
 
     public static void onAbout(){
-        About about = new About();
+        ph.edu.dlsu.About about = new ph.edu.dlsu.About();
         stage.setTitle("TraVIS: About");
         stage.setScene(
                 new Scene(about.main(), displayWidth, displayHeight)
@@ -265,7 +264,7 @@ public class Main extends Application{
     }
 
     public static void onFacts(){
-        Facts facts = new Facts();
+        ph.edu.dlsu.Facts facts = new ph.edu.dlsu.Facts();
         stage.setTitle("TraVIS: Facts");
         stage.setScene(
                 new Scene(facts.main(), displayWidth, displayHeight)
@@ -294,7 +293,7 @@ public class Main extends Application{
     }
 
     public static void main(String[] args) {
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        //System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         launch(args);
     }
 

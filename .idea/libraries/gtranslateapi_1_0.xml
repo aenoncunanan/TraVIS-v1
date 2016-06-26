@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="gtranslateapi-1.0">
+    <CLASSES>
+      <root url="jar://C:/Java Libraries/Google-Text-To-Speech/gtranslateapi-1.0.jar!/" />
+      <root url="jar://C:/Java Libraries/Google-Text-To-Speech/jl1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
