@@ -1,21 +1,21 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="TraVIS-v1:jar">
+  <artifact type="jar" build-on-make="true" name="TraVIS-v1:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/TraVIS_v1_jar</output-path>
     <root id="archive" name="TraVIS-v1.jar">
       <element id="module-output" name="TraVIS-v1" />
-      <element id="extracted-dir" path="C:/Java Libraries/commons-codec-1.10-bin/commons-codec-1.10/commons-codec-1.10-tests.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="C:/Java Libraries/commons-codec-1.10-bin/commons-codec-1.10/commons-codec-1.10.jar" path-in-jar="/" />
       <element id="extracted-dir" path="C:/Java Libraries/poi-bin-3.14/poi-3.14/poi-3.14-20160307.jar" path-in-jar="/" />
       <element id="extracted-dir" path="C:/Java Libraries/poi-bin-3.14/poi-3.14/poi-ooxml-3.14-20160307.jar" path-in-jar="/" />
       <element id="extracted-dir" path="C:/Java Libraries/poi-bin-3.14/poi-3.14/poi-examples-3.14-20160307.jar" path-in-jar="/" />
       <element id="extracted-dir" path="C:/Java Libraries/poi-bin-3.14/poi-3.14/poi-excelant-3.14-20160307.jar" path-in-jar="/" />
       <element id="extracted-dir" path="C:/Java Libraries/poi-bin-3.14/poi-3.14/poi-scratchpad-3.14-20160307.jar" path-in-jar="/" />
       <element id="extracted-dir" path="C:/Java Libraries/poi-bin-3.14/poi-3.14/poi-ooxml-schemas-3.14-20160307.jar" path-in-jar="/" />
-      <element id="library" level="project" name="x64" />
-      <element id="extracted-dir" path="C:/Java Libraries/stax-api-1.0.1.jar/stax-api-1.0.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="C:/Java Libraries/xmlbeans-2.6.0.jar/xmlbeans-2.6.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="C:/Java Libraries/opencv/build/java/opencv-310.jar" path-in-jar="/" />
       <element id="library" level="project" name="apidocs" />
+      <element id="extracted-dir" path="C:/Java Libraries/xmlbeans-2.6.0.jar/xmlbeans-2.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Java Libraries/stax-api-1.0.1.jar/stax-api-1.0.1.jar" path-in-jar="/" />
+      <element id="library" level="project" name="x64" />
+      <element id="extracted-dir" path="C:/Java Libraries/commons-codec-1.10-bin/commons-codec-1.10/commons-codec-1.10-tests.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Java Libraries/commons-codec-1.10-bin/commons-codec-1.10/commons-codec-1.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Java Libraries/opencv/build/java/opencv-310.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
