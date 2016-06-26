@@ -1,15 +1,18 @@
 package ph.edu.dlsu;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
+import javafx.scene.layout.VBox;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -36,8 +39,17 @@ public class Display {
 
     String plateNumber = "";
     String trafficViolation = "";
+    String vehicleClass = "";
+    String vehicleColor = "";
+    String date = "";
+    String time = "";
 
     int sheetNumber = 0;
+
+    final TableView table = new TableView();
+
+    final ObservableList<Item> data =
+            FXCollections.observableArrayList();
 
     public Display(TextField plate, ComboBox violation) {
 
@@ -76,44 +88,37 @@ public class Display {
             rootNode.getChildren().add(imgBackground);
         }
 
-        GridPane grid = new GridPane();
-        grid.setAlignment(Pos.CENTER);
-        grid.setHgap(10);
-        grid.setVgap(10);
-        grid.setPadding(new Insets(25, 25, 25, 25));
-
-        Text vTitle = new Text();
-        vTitle.setText("VIOLATION");
-        vTitle.setTextAlignment(TextAlignment.CENTER);
-        grid.add(vTitle, 0, 0);
-
-        Text nTitle = new Text();
-        nTitle.setText("PLATE NUMBER");
-        nTitle.setTextAlignment(TextAlignment.CENTER);
-        grid.add(nTitle, 1, 0);
-
-        Text vcTitle = new Text();
-        vcTitle.setText("VEHICLE CLASS");
-        vcTitle.setTextAlignment(TextAlignment.CENTER);
-        grid.add(vcTitle, 2, 0);
-
-        Text cTitle = new Text();
-        cTitle.setText("VEHICLE COLOR");
-        cTitle.setTextAlignment(TextAlignment.CENTER);
-        grid.add(cTitle, 3, 0);
-
-        Text dTitle = new Text();
-        dTitle.setText("DATE VIOLATED");
-        dTitle.setTextAlignment(TextAlignment.CENTER);
-        grid.add(dTitle, 4, 0);
-
-        Text tTitle = new Text();
-        tTitle.setText("TIME VIOLATED");
-        tTitle.setTextAlignment(TextAlignment.CENTER);
-        grid.add(tTitle, 5, 0);
-
         switch (inputCombination){
             case "00": // no violation, no plate number
+//                Text violation00 = new Text();
+//                violation00.setText("---");
+//                violation00.setTextAlignment(TextAlignment.CENTER);
+//                grid.add(violation00, 0, 1);
+//
+//                Text number00 = new Text();
+//                number00.setText("---");
+//                number00.setTextAlignment(TextAlignment.CENTER);
+//                grid.add(number00, 1, 1);
+//
+//                Text vehicle00 = new Text();
+//                vehicle00.setText("---");
+//                vehicle00.setTextAlignment(TextAlignment.CENTER);
+//                grid.add(vehicle00, 2, 1);
+//
+//                Text color00 = new Text();
+//                color00.setText("---");
+//                color00.setTextAlignment(TextAlignment.CENTER);
+//                grid.add(color00, 3, 1);
+//
+//                Text date00 = new Text();
+//                date00.setText("---");
+//                date00.setTextAlignment(TextAlignment.CENTER);
+//                grid.add(date00, 4, 1);
+//
+//                Text time00 = new Text();
+//                time00.setText("---");
+//                time00.setTextAlignment(TextAlignment.CENTER);
+//                grid.add(time00, 5, 1);
                 break;
             case "01": // no violation, with plate number
                 break;
@@ -166,45 +171,17 @@ public class Display {
                     Cell cell = cellIterator.next();
                     if (cell.getStringCellValue().equals(plateNumber)){
                         while (cellIterator.hasNext()) {
-                            Text violation = new Text();
-                            violation.setText(trafficViolation);
-                            violation.setTextAlignment(TextAlignment.CENTER);
-                            grid.add(violation, 0, 1);
-
-                            Text number = new Text();
-                            number.setText(cell.getStringCellValue());
-                            number.setTextAlignment(TextAlignment.CENTER);
-                            grid.add(number, 1, 1);
-
                             cell = cellIterator.next();
-
-                            Text vehicle = new Text();
-                            vehicle.setText(cell.getStringCellValue());
-                            vehicle.setTextAlignment(TextAlignment.CENTER);
-                            grid.add(vehicle, 2, 1);
-
+                            vehicleClass = cell.getStringCellValue();
                             cell = cellIterator.next();
-
-                            Text color = new Text();
-                            color.setText(cell.getStringCellValue());
-                            color.setTextAlignment(TextAlignment.CENTER);
-                            grid.add(color, 3, 1);
-
+                            vehicleColor = cell.getStringCellValue();
                             cell = cellIterator.next();
-
-                            Text date = new Text();
-                            date.setText(cell.getStringCellValue());
-                            date.setTextAlignment(TextAlignment.CENTER);
-                            grid.add(date, 4, 1);
-
+                            date = cell.getStringCellValue();
                             cell = cellIterator.next();
-
-                            Text time = new Text();
-                            time.setText(cell.getStringCellValue());
-                            time.setTextAlignment(TextAlignment.CENTER);
-                            grid.add(time, 5, 1);
+                            time = cell.getStringCellValue();
                         }
 
+                        data.add(new Item(trafficViolation, vehicleClass, plateNumber, vehicleColor, date, time));
                         found = true;
                     }
                 }
@@ -213,9 +190,6 @@ public class Display {
                 }
                 break;
         }
-
-        grid.setTranslateX(420);
-        grid.setTranslateY(325);
 
         final CustomMenuItem home = new CustomMenuItem("home");
         final CustomMenuItem facts = new CustomMenuItem("facts");
@@ -243,9 +217,113 @@ public class Display {
         menuBox.setTranslateX(485);
         menuBox.setTranslateY(630);
 
-        rootNode.getChildren().addAll(menuBox, grid);
+        TableColumn vio = new TableColumn("VIOLATION");
+        vio.setCellValueFactory(new PropertyValueFactory<>("violation"));
+        vio.setPrefWidth(150);
+
+        TableColumn num = new TableColumn("PLATE NUMBER");
+        num.setCellValueFactory(new PropertyValueFactory<>("number"));
+        num.setPrefWidth(115);
+
+        TableColumn vclass = new TableColumn("VEHICLE CLASS");
+        vclass.setCellValueFactory(new PropertyValueFactory<>("vclass"));
+        vclass.setPrefWidth(110);
+
+        TableColumn color = new TableColumn("VEHICLE COLOR");
+        color.setCellValueFactory(new PropertyValueFactory<>("color"));
+        color.setPrefWidth(100);
+
+        TableColumn date = new TableColumn("DATE VIOLATED");
+        date.setCellValueFactory(new PropertyValueFactory<>("date"));
+        date.setPrefWidth(107);
+
+        TableColumn time = new TableColumn("TIME VIOLATED");
+        time.setCellValueFactory(new PropertyValueFactory<>("time"));
+        time.setPrefWidth(100);
+
+
+        table.getColumns().addAll(vio, num, vclass, color, date, time);
+        table.setItems(data);
+        table.setPrefSize(displayWidth/2, displayHeight/3);
+
+        final VBox vbox = new VBox();
+        vbox.setSpacing(5);
+        vbox.setPadding(new Insets(10, 0, 0, 10));
+        vbox.getChildren().addAll(table);
+        vbox.setTranslateX((displayWidth/2)-350);
+        vbox.setTranslateY(350);
+
+        rootNode.getChildren().addAll(menuBox, vbox);
 
         return rootNode;
+    }
+
+    public static class Item {
+
+        private final SimpleStringProperty violation;
+        private final SimpleStringProperty number;
+        private final SimpleStringProperty vclass;
+        private final SimpleStringProperty color;
+        private final SimpleStringProperty date;
+        private final SimpleStringProperty time;
+
+        private Item(String violation, String number, String vclass, String color, String date, String time) {
+            this.violation = new SimpleStringProperty(violation);
+            this.number = new SimpleStringProperty(number);
+            this.vclass = new SimpleStringProperty(vclass);
+            this.color = new SimpleStringProperty(color);
+            this.date = new SimpleStringProperty(date);
+            this.time = new SimpleStringProperty(time);
+        }
+
+        public String getViolation() {
+            return violation.get();
+        }
+
+        public void setViolation(String vio) {
+            violation.set(vio);
+        }
+
+        public String getVclass(){
+            return vclass.get();
+        }
+
+        public void setVclass(String vio){
+            vclass.set(vio);
+        }
+
+        public String getNumber() {
+            return number.get();
+        }
+
+        public void setNumber(String vio) {
+            number.set(vio);
+        }
+
+        public String getColor() {
+            return color.get();
+        }
+
+        public void setColor(String vio) {
+            color.set(vio);
+        }
+
+        public String getDate() {
+            return date.get();
+        }
+
+        public void setDate(String vio) {
+            date.set(vio);
+        }
+
+        public String getTime() {
+            return time.get();
+        }
+
+        public void setTime(String vio) {
+            time.set(vio);
+        }
+
     }
 
 }
