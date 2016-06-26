@@ -1,5 +1,7 @@
 package ph.edu.dlsu;
 
+import com.gtranslate.Audio;
+import com.gtranslate.Language;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -10,8 +12,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
+import javazoom.jl.decoder.JavaLayerException;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by ${AenonCunanan} on 24/06/2016.
@@ -62,29 +66,29 @@ public class About {
         grid.setTranslateX(420);
         grid.setTranslateY(325);
 
-//        speakBtn.setOnAction(event -> {
-//            InputStream sound = null;
-//
-//
-//                Audio audio = Audio.getInstance();
-//            try {
-//                sound = audio.getAudio("Hello World", Language.ENGLISH);
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//            try {
-//                audio.play(sound);
-//            } catch (JavaLayerException e) {
-//                e.printStackTrace();
-//            }
-//            try {
-//                sound.close();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//
-//
-//        });
+        speakBtn.setOnAction(event -> {
+            InputStream sound = null;
+
+            Audio audio = Audio.getInstance();
+
+            try {
+                sound = audio.getAudio("Hello World", Language.ENGLISH);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                audio.play(sound);
+            } catch (JavaLayerException e) {
+                e.printStackTrace();
+            }
+            try {
+                sound.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+        });
 
         final CustomMenuItem home = new CustomMenuItem("home");
         final CustomMenuItem facts = new CustomMenuItem("facts");
@@ -100,11 +104,7 @@ public class About {
         });
 
         update.setOnMouseClicked(event -> {
-            try {
-                Main.onUpdate();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            Main.onUpdate();
         });
 
         close.setOnMouseClicked(event ->{

@@ -20,15 +20,6 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Iterator;
 
 import static javafx.scene.paint.Color.FIREBRICK;
 
@@ -87,11 +78,7 @@ public class Main extends Application{
         });
 
         update.setOnMouseClicked(event -> {
-            try {
-                onUpdate();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            onUpdate();
         });
 
         close.setOnMouseClicked(event ->{
@@ -131,20 +118,21 @@ public class Main extends Application{
         grid.add(violation, 2, 1);
 
         Sbtn.setOnAction(event ->{
-            try {
-                onSearchBtn(plate, violation);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            Display display = new Display(plate, violation);
+            stage.setTitle("TraVIS: Results");
+            stage.setScene(
+                    new Scene(display.main(), displayWidth, displayHeight)
+            );
+            stage.setFullScreen(true);                                  //Set the stage in fullscreen mode
+            stage.setFullScreenExitHint("");
         });
 
         grid.setTranslateX(455);
         grid.setTranslateY(325);
 
-        Label updateMessage = new Label();
         if (updated == true){
-            updateMessage.setText("Database is up to date!" +
-                    "\nData as of: mm/dd/yy");
+            Label updateMessage = new Label();
+            updateMessage.setText("Database is up to date!");
             updateMessage.setTranslateX(620);
             updateMessage.setTranslateY(500);
             updateMessage.setTextAlignment(TextAlignment.CENTER);
@@ -158,92 +146,13 @@ public class Main extends Application{
 
             fade.play();
             updated = false;
+            rootNode.getChildren().addAll(grid, menuBox, updateMessage);
         }
-
-        rootNode.getChildren().addAll(grid, menuBox, updateMessage);
+        else {
+            rootNode.getChildren().addAll(grid, menuBox);
+        }
 
         return rootNode;
-    }
-
-    private void onSearchBtn(TextField plate, ComboBox violation) throws IOException {
-
-        //no violation, no number
-        if ((violation.getValue() == "Select a violation") && (plate.getText().isEmpty())){
-            System.out.println("No violation and plate number is detected");
-        }
-
-        //no violation, with number
-        else if ((violation.getValue() == "Select a violation") && (!plate.getText().isEmpty())){
-            System.out.println("No violation is detected but with plate number");
-        }
-
-        //with violation, no number
-        else if ((violation.getValue() != "Select a violation") && (plate.getText().isEmpty())){
-            System.out.println("Violation is detected but no plate number");
-        }
-
-        //with violation, with number
-        else {
-            System.out.println("Violation and number is detected");
-
-                Boolean found = false;
-
-                int sheetNumber = 0;
-
-                if (violation.getValue() == "Speeding") {
-                    sheetNumber = 0;
-                }
-                else if (violation.getValue() == "Swerving"){
-                    sheetNumber = 1;
-                }
-                else if (violation.getValue() == "Drunk Driving"){
-                    sheetNumber = 2;
-                }
-                else if (violation.getValue() == "Counterflowing"){
-                    sheetNumber = 3;
-                }
-                else if (violation.getValue() == "Beating the red light"){
-                    sheetNumber = 4;
-                }
-
-                File myFile = new File("dat/Violation-Database.xlsx");
-
-                FileInputStream fis = new FileInputStream(myFile);
-
-                XSSFWorkbook myWorkBook = new XSSFWorkbook(fis);
-
-                XSSFSheet mySheet = myWorkBook.getSheetAt(sheetNumber);
-
-                Iterator<Row> rowIterator = mySheet.iterator();
-                //Traverse each row
-                while (rowIterator.hasNext() && !found){
-                    Row row = rowIterator.next();
-
-                    //For each row, traverse each column
-                    Iterator<Cell> cellIterator = row.cellIterator();
-                    Cell cell = cellIterator.next();
-                    if (cell.getStringCellValue().equals(plate.getText())){
-                        while (cellIterator.hasNext()) {
-                            System.out.println("Violation       : " + violation.getValue());
-                            System.out.println("Plate Number    : " + cell.getStringCellValue());
-                            cell = cellIterator.next();
-                            System.out.println("Vehicle Class   : " + cell.getStringCellValue());
-                            cell = cellIterator.next();
-                            System.out.println("Vehicle Color   : " + cell.getStringCellValue());
-                            cell = cellIterator.next();
-                            System.out.println("Date Committed  : " + cell.getStringCellValue());
-                            cell = cellIterator.next();
-                            System.out.println("Time Committed  : " + cell.getStringCellValue());
-                        }
-
-                        found = true;
-                    }
-                }
-                if (!found){
-                    System.out.println("Plate number does not found in the list of " + violation.getValue() + " violators.");
-                }
-
-        }
     }
 
     public static void onHome(){
@@ -273,8 +182,8 @@ public class Main extends Application{
         stage.setFullScreenExitHint("");
     }
 
-    public static void onUpdate() throws IOException {
-
+    public static void onUpdate() {
+        //can place a download algorithm here to retrieve database from the internet.
         updated = true;
         onHome();
 
