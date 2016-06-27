@@ -112,7 +112,9 @@ public class Main extends Application{
                 "Swerving",
                 "Drunk Driving",
                 "Counterflowing",
-                "Beating the red light"
+                "Beating the red light",
+                "Color Coding",
+                "All Violations"
         );
         violation.setValue("Select a violation");
         grid.add(violation, 2, 1);
