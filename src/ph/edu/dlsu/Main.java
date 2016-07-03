@@ -21,6 +21,11 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.*;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
 import static javafx.scene.paint.Color.FIREBRICK;
 
 public class Main extends Application{
@@ -78,7 +83,11 @@ public class Main extends Application{
         });
 
         update.setOnMouseClicked(event -> {
-            onUpdate();
+            try {
+                onUpdate();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
 
         close.setOnMouseClicked(event ->{
@@ -184,11 +193,52 @@ public class Main extends Application{
         stage.setFullScreenExitHint("");
     }
 
-    public static void onUpdate() {
+    public static void onUpdate() throws IOException {
         //can place a download algorithm here to retrieve database from the internet.
-        updated = true;
-        onHome();
 
+        if(hasInternet()){
+            System.out.println("CONNECTED TO INTERNET");
+
+//            String fileName = "Violation-Database.xlsx";
+//            URL link = new URL("https://drive.google.com/open?id=0B8qhMZ6t9O8ONVJRMnpMQVg2LUk");
+//
+//            InputStream in = new BufferedInputStream(link.openStream());
+//            ByteArrayOutputStream out = new ByteArrayOutputStream();
+//            byte[] buf = new byte[1024];
+//            int n = 0;
+//            while(-1 != (n = in.read(buf))){
+//                out.write(buf, 0, n);
+//            }
+//            out.close();
+//            in.close();
+//            byte[] response = out.toByteArray();
+//
+//            FileOutputStream fos = new FileOutputStream(fileName);
+//            fos.write(response);
+//            fos.close();
+
+            updated = true;
+            onHome();
+        }
+        else{
+            System.out.println("NO INTERNET CONNECTION!");
+            updated = false;
+            onHome();
+        }
+
+    }
+
+    public static boolean hasInternet(){
+        try {
+            final URL url = new URL("http://www.google.com");
+            final URLConnection conn = url.openConnection();
+            conn.connect();
+            return true;
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            return false;
+        }
     }
 
     public static void onExit() {

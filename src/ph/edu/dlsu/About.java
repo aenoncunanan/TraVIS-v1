@@ -104,7 +104,11 @@ public class About {
         });
 
         update.setOnMouseClicked(event -> {
-            Main.onUpdate();
+            try {
+                Main.onUpdate();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
 
         close.setOnMouseClicked(event ->{

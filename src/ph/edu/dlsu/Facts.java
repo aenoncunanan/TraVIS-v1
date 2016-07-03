@@ -9,6 +9,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
+import java.io.IOException;
+
 /**
  * Created by ${AenonCunanan} on 24/06/2016.
  */
@@ -56,7 +58,11 @@ public class Facts {
         });
 
         update.setOnMouseClicked(event -> {
-            Main.onUpdate();
+            try {
+                Main.onUpdate();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
 
         close.setOnMouseClicked(event ->{
