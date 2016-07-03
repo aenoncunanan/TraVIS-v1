@@ -155,7 +155,8 @@ public class Display {
                                 cell = cellIterator.next();
                                 date = cell.getStringCellValue();
                                 cell = cellIterator.next();
-                                time = cell.getStringCellValue();
+//                                time = cell.getStringCellValue();
+                                time = String.valueOf((int)cell.getNumericCellValue());
                             }
                             data.add(new Item(trafficViolation, plateNumber, vehicleClass, vehicleColor, date, time));
                         }
@@ -203,7 +204,8 @@ public class Display {
                             cell = cellIterator.next();
                             date = cell.getStringCellValue();
                             cell = cellIterator.next();
-                            time = cell.getStringCellValue();
+//                            time = cell.getStringCellValue();
+                            time = String.valueOf((int)cell.getNumericCellValue());
                         }
 
                         data.add(new Item(trafficViolation, plateNumber, vehicleClass, vehicleColor, date, time));
@@ -250,7 +252,8 @@ public class Display {
                             cell = cellIterator.next();
                             date = cell.getStringCellValue();
                             cell = cellIterator.next();
-                            time = cell.getStringCellValue();
+//                            time = cell.getStringCellValue();
+                            time = String.valueOf((int)cell.getNumericCellValue());
                         }
 
                         data.add(new Item(trafficViolation, plateNumber, vehicleClass, vehicleColor, date, time));
@@ -299,7 +302,8 @@ public class Display {
                                 cell = cellIterator.next();
                                 date = cell.getStringCellValue();
                                 cell = cellIterator.next();
-                                time = cell.getStringCellValue();
+//                                time = cell.getStringCellValue();
+                                time = String.valueOf((int)cell.getNumericCellValue());
                             }
                         data.add(new Item(trafficViolation, plateNumber, vehicleClass, vehicleColor, date, time));
                     }

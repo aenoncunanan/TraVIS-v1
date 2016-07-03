@@ -9,8 +9,6 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 
-import java.io.IOException;
-
 /**
  * Created by ${AenonCunanan} on 24/06/2016.
  */
@@ -46,7 +44,7 @@ public class Facts {
 
         final CustomMenuItem home = new CustomMenuItem("home");
         final CustomMenuItem about = new CustomMenuItem("about");
-        final CustomMenuItem update = new CustomMenuItem("update");
+        final CustomMenuItem graph = new CustomMenuItem("graph");
         final CustomMenuItem close = new CustomMenuItem("close");
 
         home.setOnMouseClicked(event -> {
@@ -57,21 +55,17 @@ public class Facts {
             Main.onAbout();
         });
 
-        update.setOnMouseClicked(event -> {
-            try {
-                Main.onUpdate();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        graph.setOnMouseClicked(event -> {
+            Main.onGraph();
         });
 
         close.setOnMouseClicked(event ->{
             Main.onExit();
         });
 
-        menuBox = new MenuHBox(home, about, update, close);
+        menuBox = new MenuHBox(home, about, graph, close);
 //        menuBox.setTranslateX(725);
-        menuBox.setTranslateX(485);
+        menuBox.setTranslateX((displayWidth/2) - (200));
         menuBox.setTranslateY(630);
 
         rootNode.getChildren().addAll(menuBox, grid);

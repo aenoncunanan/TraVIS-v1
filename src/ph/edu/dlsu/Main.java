@@ -73,7 +73,7 @@ public class Main extends Application{
 
         final CustomMenuItem about = new CustomMenuItem("About");
         final CustomMenuItem facts = new CustomMenuItem("facts");
-//        final CustomMenuItem update = new CustomMenuItem("update");
+        final CustomMenuItem graph = new CustomMenuItem("graph");
         final CustomMenuItem close = new CustomMenuItem("close");
 
         about.setOnMouseClicked(event -> {
@@ -84,13 +84,17 @@ public class Main extends Application{
             onFacts();
         });
 
+        graph.setOnMouseClicked(event -> {
+            onGraph();
+        });
+
         close.setOnMouseClicked(event ->{
             onExit();
         });
 
-        menuBox = new ph.edu.dlsu.MenuHBox(about, facts, close);
+        menuBox = new ph.edu.dlsu.MenuHBox(about, facts, graph, close);
 //        menuBox.setTranslateX(725); //Use this if menus are to be located beside the school logo
-        menuBox.setTranslateX(485);
+        menuBox.setTranslateX((displayWidth/2) - (200));
         menuBox.setTranslateY(630);
 
         GridPane grid = new GridPane();
@@ -139,7 +143,7 @@ public class Main extends Application{
             Label updateMessage = new Label();
             updateMessage.setText("Database is up to date!");
             updateMessage.setTranslateX(620);
-            updateMessage.setTranslateY(500);
+            updateMessage.setTranslateY(480);
             updateMessage.setTextAlignment(TextAlignment.CENTER);
             updateMessage.setTextFill(FIREBRICK);
             FadeTransition fader = createFader(updateMessage);
@@ -158,7 +162,7 @@ public class Main extends Application{
             Label updateMessage = new Label();
             updateMessage.setText("Cannot update the database!\nNo Internet Connection!");
             updateMessage.setTranslateX(620);
-            updateMessage.setTranslateY(500);
+            updateMessage.setTranslateY(480);
             updateMessage.setTextAlignment(TextAlignment.CENTER);
             updateMessage.setTextFill(FIREBRICK);
             FadeTransition fader = createFader(updateMessage);
@@ -202,28 +206,38 @@ public class Main extends Application{
         stage.setFullScreenExitHint("");
     }
 
+    public static void onGraph(){
+        ph.edu.dlsu.Graph graph = new ph.edu.dlsu.Graph();
+        stage.setTitle("TraVIS: Graph");
+        stage.setScene(
+                new Scene(graph.main(), displayWidth, displayHeight)
+        );
+        stage.setFullScreen(true);                                  //Set the stage in fullscreen mode
+        stage.setFullScreenExitHint("");
+    }
+
     public static void onUpdate() throws IOException {
 
         hasInternet();
 
         if(internet){
-            String fileName = "Violation-Database.xlsx";
-            URL link = new URL("https://drive.google.com/open?id=0B8qhMZ6t9O8ONVJRMnpMQVg2LUk");
-
-            InputStream in = new BufferedInputStream(link.openStream());
-            ByteArrayOutputStream out = new ByteArrayOutputStream();
-            byte[] buf = new byte[1024];
-            int n = 0;
-            while(-1 != (n = in.read(buf))){
-                out.write(buf, 0, n);
-            }
-            out.close();
-            in.close();
-            byte[] response = out.toByteArray();
-
-            FileOutputStream fos = new FileOutputStream(fileName);
-            fos.write(response);
-            fos.close();
+//            String fileName = "Violation-Database.xlsx";
+//            URL link = new URL("https://drive.google.com/open?id=0B8qhMZ6t9O8ONVJRMnpMQVg2LUk");
+//
+//            InputStream in = new BufferedInputStream(link.openStream());
+//            ByteArrayOutputStream out = new ByteArrayOutputStream();
+//            byte[] buf = new byte[1024];
+//            int n = 0;
+//            while(-1 != (n = in.read(buf))){
+//                out.write(buf, 0, n);
+//            }
+//            out.close();
+//            in.close();
+//            byte[] response = out.toByteArray();
+//
+//            FileOutputStream fos = new FileOutputStream("dat/" + fileName);
+//            fos.write(response);
+//            fos.close();
 
             updated = true;
             internet = true;

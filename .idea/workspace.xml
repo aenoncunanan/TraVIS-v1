@@ -5,14 +5,23 @@
       <artifact name="TraVIS-v1:jar" />
     </artifacts-to-build>
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/ph/edu/dlsu/Display.java" line="350" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7b15153a-fd4e-4273-bd77-ca4f3f596938" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ph/edu/dlsu/Graph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dat/Violation-Database.xlsx" afterPath="$PROJECT_DIR$/dat/Violation-Database.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TraVIS_v1_jar/TraVIS-v1.jar" afterPath="$PROJECT_DIR$/out/artifacts/TraVIS_v1_jar/TraVIS-v1.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/About.class" afterPath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/About.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Display$Item.class" afterPath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Display$Item.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Display.class" afterPath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Display.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Facts.class" afterPath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Facts.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Main.class" afterPath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ph/edu/dlsu/About.java" afterPath="$PROJECT_DIR$/src/ph/edu/dlsu/About.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ph/edu/dlsu/Display.java" afterPath="$PROJECT_DIR$/src/ph/edu/dlsu/Display.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ph/edu/dlsu/Facts.java" afterPath="$PROJECT_DIR$/src/ph/edu/dlsu/Facts.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ph/edu/dlsu/Main.java" afterPath="$PROJECT_DIR$/src/ph/edu/dlsu/Main.java" />
     </list>
     <ignored path="TraVIS-v1.iws" />
@@ -38,18 +47,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Main.java">
+      <file leaf-file-name="Display.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-27">
-              <caret line="204" column="54" selection-start-line="204" selection-start-column="54" selection-end-line="204" selection-end-column="54" />
+            <state relative-caret-position="155">
+              <caret line="109" column="9" selection-start-line="95" selection-start-column="1" selection-end-line="109" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;class#Display#0" expanded="false" />
+                <element signature="class#Item#0;class#Display#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Graph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="144" column="58" selection-start-line="144" selection-start-column="58" selection-end-line="144" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3837#3853#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="96" column="50" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#start#0;class#Main#0" expanded="false" />
                 <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-                <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
                 <element signature="method#onHome#0;class#Main#0" expanded="false" />
                 <element signature="method#onAbout#0;class#Main#0" expanded="false" />
                 <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+                <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+                <element signature="e#7337#7395#0" expanded="false" />
                 <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
                 <element signature="method#createFader#0;class#Main#0" expanded="false" />
               </folding>
@@ -90,10 +128,11 @@
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/about.java" />
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/wViolationwNumber.java" />
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Utils.java" />
-        <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Facts.java" />
-        <option value="$PROJECT_DIR$/src/ph/edu/dlsu/About.java" />
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Display.java" />
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Main.java" />
+        <option value="$PROJECT_DIR$/src/ph/edu/dlsu/About.java" />
+        <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Facts.java" />
+        <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Graph.java" />
       </list>
     </option>
   </component>
@@ -232,7 +271,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="148" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
@@ -538,23 +577,23 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2056213" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.231454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885799" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15812592" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39792898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39699247" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -601,11 +640,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
             <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7337#7395#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -698,11 +739,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
             <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7337#7395#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -715,11 +758,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
             <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7337#7395#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -732,11 +777,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
             <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7337#7395#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -749,11 +796,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
             <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7337#7395#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -766,11 +815,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
             <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7337#7395#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -783,11 +834,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
             <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7337#7395#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -800,11 +853,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
             <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7337#7395#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -817,11 +872,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
             <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7337#7395#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -834,11 +891,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
             <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7337#7395#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -851,11 +910,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
             <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7337#7395#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -868,11 +929,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
             <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7337#7395#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -936,28 +999,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/About.java">
+    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="109" column="16" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="36" />
+        <state relative-caret-position="251">
+          <caret line="96" column="50" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
+            <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7337#7395#0" expanded="false" />
+            <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
+            <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Facts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="36" />
+        <state relative-caret-position="408">
+          <caret line="67" column="53" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Display.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="260" column="16" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
+        <state relative-caret-position="155">
+          <caret line="109" column="9" selection-start-line="95" selection-start-column="1" selection-end-line="109" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
@@ -966,19 +1038,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/About.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="204" column="54" selection-start-line="204" selection-start-column="54" selection-end-line="204" selection-end-column="54" />
+        <state relative-caret-position="235">
+          <caret line="115" column="53" selection-start-line="115" selection-start-column="53" selection-end-line="115" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
-            <element signature="method#onHome#0;class#Main#0" expanded="false" />
-            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
-            <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
-            <element signature="method#createFader#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="144" column="58" selection-start-line="144" selection-start-column="58" selection-end-line="144" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3837#3853#0" expanded="true" />
           </folding>
         </state>
       </provider>

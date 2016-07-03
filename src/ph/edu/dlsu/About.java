@@ -92,7 +92,7 @@ public class About {
 
         final CustomMenuItem home = new CustomMenuItem("home");
         final CustomMenuItem facts = new CustomMenuItem("facts");
-        final CustomMenuItem update = new CustomMenuItem("update");
+        final CustomMenuItem graph = new CustomMenuItem("graph");
         final CustomMenuItem close = new CustomMenuItem("close");
 
         home.setOnMouseClicked(event -> {
@@ -103,21 +103,17 @@ public class About {
             Main.onFacts();
         });
 
-        update.setOnMouseClicked(event -> {
-            try {
-                Main.onUpdate();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        graph.setOnMouseClicked(event -> {
+            Main.onGraph();
         });
 
         close.setOnMouseClicked(event ->{
             Main.onExit();
         });
 
-        menuBox = new MenuHBox(home, facts, update, close);
+        menuBox = new MenuHBox(home, facts, graph, close);
 //        menuBox.setTranslateX(725);
-        menuBox.setTranslateX(485);
+        menuBox.setTranslateX((displayWidth/2) - (200));
         menuBox.setTranslateY(630);
 
         rootNode.getChildren().addAll(menuBox, grid);
