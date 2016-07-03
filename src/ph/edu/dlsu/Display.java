@@ -284,9 +284,9 @@ public class Display {
                     Iterator<Row> rowIterator110 = mySheet110.iterator();
 
                     //Traverse each row
+                    rowIterator110.next();
                     while (rowIterator110.hasNext()) {
                         Row row = rowIterator110.next();
-                    //CAUSE OF PROBLEM IS HERE!
                         //For each row, traverse each column
                         Iterator<Cell> cellIterator = row.cellIterator();
                         Cell cell = cellIterator.next();
