@@ -7,8 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b15153a-fd4e-4273-bd77-ca4f3f596938" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dat/Violation-Database.xlsx" afterPath="$PROJECT_DIR$/dat/Violation-Database.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TraVIS_v1_jar/TraVIS-v1.jar" afterPath="$PROJECT_DIR$/out/artifacts/TraVIS_v1_jar/TraVIS-v1.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Display$Item.class" afterPath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Display$Item.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Display.class" afterPath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Display.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Main.class" afterPath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ph/edu/dlsu/Display.java" afterPath="$PROJECT_DIR$/src/ph/edu/dlsu/Display.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ph/edu/dlsu/Main.java" afterPath="$PROJECT_DIR$/src/ph/edu/dlsu/Main.java" />
     </list>
     <ignored path="TraVIS-v1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,31 +38,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Display.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Display.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="300" column="52" selection-start-line="300" selection-start-column="52" selection-end-line="300" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Display#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+            <state relative-caret-position="-27">
+              <caret line="204" column="54" selection-start-line="204" selection-start-column="54" selection-end-line="204" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#start#0;class#Main#0" expanded="false" />
                 <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+                <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
                 <element signature="method#onHome#0;class#Main#0" expanded="false" />
+                <element signature="method#onAbout#0;class#Main#0" expanded="false" />
                 <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-                <element signature="e#6468#6526#0" expanded="false" />
                 <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
                 <element signature="method#createFader#0;class#Main#0" expanded="false" />
               </folding>
@@ -100,8 +92,8 @@
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Utils.java" />
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Facts.java" />
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/About.java" />
-        <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Main.java" />
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Display.java" />
+        <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Main.java" />
       </list>
     </option>
   </component>
@@ -582,7 +574,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -598,6 +590,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -608,11 +601,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="e#6468#6526#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -634,6 +627,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -645,6 +639,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -656,6 +651,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -667,6 +663,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -678,6 +675,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -689,6 +687,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -699,11 +698,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="e#6468#6526#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -716,11 +715,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="e#6468#6526#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -733,11 +732,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="e#6468#6526#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -750,11 +749,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="e#6468#6526#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -767,11 +766,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="e#6468#6526#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -784,11 +783,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="e#6468#6526#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -801,11 +800,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="e#6468#6526#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -818,11 +817,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="e#6468#6526#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -835,11 +834,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="e#6468#6526#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -852,11 +851,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="e#6468#6526#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -869,11 +868,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
             <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
             <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="e#6468#6526#0" expanded="false" />
             <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
             <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
@@ -955,30 +954,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Display.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+        <state relative-caret-position="409">
+          <caret line="260" column="16" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
-            <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
-            <element signature="method#onHome#0;class#Main#0" expanded="false" />
-            <element signature="method#onFacts#0;class#Main#0" expanded="false" />
-            <element signature="e#6468#6526#0" expanded="false" />
-            <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
-            <element signature="method#createFader#0;class#Main#0" expanded="false" />
+            <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Display.java">
+    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="300" column="52" selection-start-line="300" selection-start-column="52" selection-end-line="300" selection-end-column="52" />
+        <state relative-caret-position="-27">
+          <caret line="204" column="54" selection-start-line="204" selection-start-column="54" selection-end-line="204" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#createHomeContent#0;class#Main#0" expanded="false" />
+            <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
+            <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
+            <element signature="method#createFader#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>

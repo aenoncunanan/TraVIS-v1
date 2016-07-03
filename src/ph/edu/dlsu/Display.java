@@ -258,7 +258,7 @@ public class Display {
                 }
                 break;
             case "110":// All violations, no number
-                System.out.println("List all violations and violators!");
+
                 while (sheetCount < 6) {
                     if (sheetCount == 0){
                         trafficViolation = "Speeding";

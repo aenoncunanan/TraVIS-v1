@@ -34,12 +34,14 @@ public class Main extends Application{
     private static double displayHeight;
 
     static Boolean updated = false;
+    static Boolean internet = false;
 
     static Stage stage;
     static Scene homeScene;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        onUpdate();
         initializeScreenSize();
         homeScene = new Scene(createHomeContent());
         stage = primaryStage;
@@ -71,7 +73,7 @@ public class Main extends Application{
 
         final CustomMenuItem about = new CustomMenuItem("About");
         final CustomMenuItem facts = new CustomMenuItem("facts");
-        final CustomMenuItem update = new CustomMenuItem("update");
+//        final CustomMenuItem update = new CustomMenuItem("update");
         final CustomMenuItem close = new CustomMenuItem("close");
 
         about.setOnMouseClicked(event -> {
@@ -82,19 +84,11 @@ public class Main extends Application{
             onFacts();
         });
 
-        update.setOnMouseClicked(event -> {
-            try {
-                onUpdate();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
-
         close.setOnMouseClicked(event ->{
             onExit();
         });
 
-        menuBox = new ph.edu.dlsu.MenuHBox(about, facts, update, close);
+        menuBox = new ph.edu.dlsu.MenuHBox(about, facts, close);
 //        menuBox.setTranslateX(725); //Use this if menus are to be located beside the school logo
         menuBox.setTranslateX(485);
         menuBox.setTranslateY(630);
@@ -141,7 +135,7 @@ public class Main extends Application{
         grid.setTranslateX(455);
         grid.setTranslateY(325);
 
-        if (updated == true){
+        if (updated == true && internet == true){
             Label updateMessage = new Label();
             updateMessage.setText("Database is up to date!");
             updateMessage.setTranslateX(620);
@@ -157,10 +151,25 @@ public class Main extends Application{
 
             fade.play();
             updated = false;
+            internet = false;
             rootNode.getChildren().addAll(grid, menuBox, updateMessage);
         }
         else {
-            rootNode.getChildren().addAll(grid, menuBox);
+            Label updateMessage = new Label();
+            updateMessage.setText("Cannot update the database!\nNo Internet Connection!");
+            updateMessage.setTranslateX(620);
+            updateMessage.setTranslateY(500);
+            updateMessage.setTextAlignment(TextAlignment.CENTER);
+            updateMessage.setTextFill(FIREBRICK);
+            FadeTransition fader = createFader(updateMessage);
+
+            SequentialTransition fade = new SequentialTransition(
+                    updateMessage,
+                    fader
+            );
+
+            fade.play();
+            rootNode.getChildren().addAll(grid, menuBox, updateMessage);
         }
 
         return rootNode;
@@ -194,50 +203,48 @@ public class Main extends Application{
     }
 
     public static void onUpdate() throws IOException {
-        //can place a download algorithm here to retrieve database from the internet.
 
-        if(hasInternet()){
-            System.out.println("CONNECTED TO INTERNET");
+        hasInternet();
 
-//            String fileName = "Violation-Database.xlsx";
-//            URL link = new URL("https://drive.google.com/open?id=0B8qhMZ6t9O8ONVJRMnpMQVg2LUk");
-//
-//            InputStream in = new BufferedInputStream(link.openStream());
-//            ByteArrayOutputStream out = new ByteArrayOutputStream();
-//            byte[] buf = new byte[1024];
-//            int n = 0;
-//            while(-1 != (n = in.read(buf))){
-//                out.write(buf, 0, n);
-//            }
-//            out.close();
-//            in.close();
-//            byte[] response = out.toByteArray();
-//
-//            FileOutputStream fos = new FileOutputStream(fileName);
-//            fos.write(response);
-//            fos.close();
+        if(internet){
+            String fileName = "Violation-Database.xlsx";
+            URL link = new URL("https://drive.google.com/open?id=0B8qhMZ6t9O8ONVJRMnpMQVg2LUk");
+
+            InputStream in = new BufferedInputStream(link.openStream());
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            byte[] buf = new byte[1024];
+            int n = 0;
+            while(-1 != (n = in.read(buf))){
+                out.write(buf, 0, n);
+            }
+            out.close();
+            in.close();
+            byte[] response = out.toByteArray();
+
+            FileOutputStream fos = new FileOutputStream(fileName);
+            fos.write(response);
+            fos.close();
 
             updated = true;
-            onHome();
+            internet = true;
         }
         else{
-            System.out.println("NO INTERNET CONNECTION!");
             updated = false;
-            onHome();
+            internet = false;
         }
 
     }
 
-    public static boolean hasInternet(){
+    public static void hasInternet(){
         try {
             final URL url = new URL("http://www.google.com");
             final URLConnection conn = url.openConnection();
             conn.connect();
-            return true;
+            internet = true;
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
-            return false;
+            internet = false;
         }
     }
 
@@ -246,7 +253,7 @@ public class Main extends Application{
     }
 
     private static FadeTransition createFader(Node node){
-        FadeTransition fade = new FadeTransition(Duration.seconds(5), node);
+        FadeTransition fade = new FadeTransition(Duration.seconds(10), node);
         fade.setFromValue(100);
         fade.setToValue(0);
 
