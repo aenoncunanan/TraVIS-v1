@@ -12,7 +12,6 @@
       <element id="library" level="project" name="apidocs" />
       <element id="extracted-dir" path="C:/Java Libraries/xmlbeans-2.6.0.jar/xmlbeans-2.6.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="C:/Java Libraries/stax-api-1.0.1.jar/stax-api-1.0.1.jar" path-in-jar="/" />
-      <element id="library" level="project" name="x64" />
       <element id="extracted-dir" path="C:/Java Libraries/commons-codec-1.10-bin/commons-codec-1.10/commons-codec-1.10-tests.jar" path-in-jar="/" />
       <element id="extracted-dir" path="C:/Java Libraries/commons-codec-1.10-bin/commons-codec-1.10/commons-codec-1.10.jar" path-in-jar="/" />
       <element id="extracted-dir" path="C:/Java Libraries/opencv/build/java/opencv-310.jar" path-in-jar="/" />

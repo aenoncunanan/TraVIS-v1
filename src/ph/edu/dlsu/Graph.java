@@ -27,8 +27,6 @@ public class Graph {
     double displayWidth = screen.getDisplayWidth();
     double displayHeight = screen.getDisplayHeight();
 
-    String trafficViolation = "";
-
     int sheetCount = 0;
     int speedCount = 0;
     int swervingCount = 0;
@@ -36,7 +34,6 @@ public class Graph {
     int counterflowingCount = 0;
     int beatingCount = 0;
     int colorCount = 0;
-
 
     public Parent main(){
         Pane rootNode = new Pane();
@@ -64,24 +61,6 @@ public class Graph {
         }
 
         while (sheetCount < 6) {
-            if (sheetCount == 0){
-                trafficViolation = "Speeding";
-            }
-            else if (sheetCount == 1){
-                trafficViolation = "Swerving";
-            }
-            else if (sheetCount == 2){
-                trafficViolation = "Drunk Driving";
-            }
-            else if (sheetCount == 3){
-                trafficViolation = "Counterflowing";
-            }
-            else if (sheetCount == 4){
-                trafficViolation = "Beating the red light";
-            }
-            else if (sheetCount == 5){
-                trafficViolation = "Color Coding";
-            }
 
             XSSFSheet mySheet110 = myWorkBook.getSheetAt(sheetCount);
 

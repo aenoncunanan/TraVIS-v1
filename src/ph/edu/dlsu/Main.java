@@ -21,7 +21,7 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.io.*;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -221,6 +221,7 @@ public class Main extends Application{
         hasInternet();
 
         if(internet){
+
 //            String fileName = "Violation-Database.xlsx";
 //            URL link = new URL("https://drive.google.com/open?id=0B8qhMZ6t9O8ONVJRMnpMQVg2LUk");
 //

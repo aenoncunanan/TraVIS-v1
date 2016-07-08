@@ -1,7 +1,5 @@
 package ph.edu.dlsu;
 
-import com.gtranslate.Audio;
-import com.gtranslate.Language;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -12,10 +10,16 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
-import javazoom.jl.decoder.JavaLayerException;
+import marytts.LocalMaryInterface;
+import marytts.MaryInterface;
+import marytts.exceptions.MaryConfigurationException;
+import marytts.exceptions.SynthesisException;
+import marytts.util.data.audio.AudioPlayer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
-import java.io.InputStream;
+import javax.sound.sampled.AudioInputStream;
+import java.util.Set;
 
 /**
  * Created by ${AenonCunanan} on 24/06/2016.
@@ -67,27 +71,7 @@ public class About {
         grid.setTranslateY(325);
 
         speakBtn.setOnAction(event -> {
-            InputStream sound = null;
-
-            Audio audio = Audio.getInstance();
-
-            try {
-                sound = audio.getAudio("Hello World", Language.ENGLISH);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            try {
-                audio.play(sound);
-            } catch (JavaLayerException e) {
-                e.printStackTrace();
-            }
-            try {
-                sound.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-
+            say(message.getText());
         });
 
         final CustomMenuItem home = new CustomMenuItem("home");
@@ -119,6 +103,39 @@ public class About {
         rootNode.getChildren().addAll(menuBox, grid);
 
         return rootNode;
+    }
+
+    private static final Logger logger = LoggerFactory.getLogger(Main.class);
+
+    private static boolean inited = false;
+    private static MaryInterface marytts = null;
+
+    private static void init() throws MaryConfigurationException {
+        marytts = new LocalMaryInterface();
+        Set<String> voices = marytts.getAvailableVoices();
+        marytts.setVoice(voices.iterator().next());
+
+        inited = true;
+    }
+
+    public static void say(String comment) {
+
+        try {
+            if (!inited) {
+                init();
+            }
+
+            if (comment.isEmpty()) {
+                return;
+            }
+
+            AudioInputStream audio = marytts.generateAudio(comment);
+            AudioPlayer player = new AudioPlayer(audio);
+            player.start();
+        } catch (MaryConfigurationException |
+                SynthesisException e) {
+            logger.error("Error synthesizing text to voice", e);
+        }
     }
 
 }
