@@ -10,6 +10,7 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import org.apache.commons.lang.WordUtils;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -37,7 +38,7 @@ public class Graph {
         Pane rootNode = new Pane();
         rootNode.setPrefSize(displayWidth, displayHeight);
 
-        ImageView imgBackground = Utils.loadImage2View("res/TraVIS.jpg", displayWidth, displayHeight);
+        ImageView imgBackground = Utils.loadImage2View("res/TraVIS_Others.jpg", displayWidth, displayHeight);
         if (imgBackground != null) {
             rootNode.getChildren().add(imgBackground);
         }
@@ -85,13 +86,15 @@ public class Graph {
             }
 
             data.add(new Item(myWorkBook.getSheetName(sheetCount)));
-            series.getData().add(new XYChart.Data(myWorkBook.getSheetName(sheetCount),count));
+            series.getData().add(new XYChart.Data(WordUtils.capitalizeFully(myWorkBook.getSheetName(sheetCount)),count));
         }
 
         bc.getData().addAll(series);
         bc.setTranslateX((displayWidth/2) - ((displayWidth/2)/2));
-        bc.setTranslateY((displayHeight/4) + (150));
-        bc.setPrefSize(displayWidth/2, displayHeight/2.6);
+//        bc.setTranslateY((displayHeight/4) + (150));
+        bc.setTranslateY((displayHeight/7) + (150));
+//        bc.setPrefSize(displayWidth/2, displayHeight/2.6);
+        bc.setPrefSize(displayWidth/2, displayHeight-390);
 
         final CustomMenuItem home = new CustomMenuItem("home");
         final CustomMenuItem about = new CustomMenuItem("about");

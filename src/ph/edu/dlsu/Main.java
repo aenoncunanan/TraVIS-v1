@@ -20,7 +20,12 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import org.apache.commons.lang.WordUtils;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -113,16 +118,35 @@ public class Main extends Application{
         plate.setPromptText("Enter a plate number");
         grid.add(plate, 1, 1);
 
+        File myFile = new File("dat/Violation-Database.xlsx");
+
+        FileInputStream fis = null;
+        try {
+            fis = new FileInputStream(myFile);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        XSSFWorkbook myWorkBook = null;
+        try {
+            myWorkBook = new XSSFWorkbook(fis);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         final ComboBox violation = new ComboBox();
-        violation.getItems().addAll(
-                "Speeding",
-                "Swerving",
-                "Drunk Driving",
-                "Counterflowing",
-                "Beating the red light",
-                "Color Coding",
+
+        String item = null;
+
+        for (int sheetCount = 0; sheetCount < myWorkBook.getNumberOfSheets(); sheetCount++){
+            item = myWorkBook.getSheetName(sheetCount);
+            violation.getItems().add(WordUtils.capitalizeFully(item));
+        }
+
+        violation.getItems().add(
                 "All Violations"
         );
+
         violation.setValue("Select a violation");
         grid.add(violation, 2, 1);
 
