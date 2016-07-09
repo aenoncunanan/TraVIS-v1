@@ -6,26 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/ph/edu/dlsu/Display.java" line="350" />
+    <bookmark url="file://$PROJECT_DIR$/src/ph/edu/dlsu/Display.java" line="333" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b15153a-fd4e-4273-bd77-ca4f3f596938" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/gtranslateapi_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/jl1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/stax_api_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/x64.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TraVIS_v1_jar/TraVIS-v1.jar" afterPath="$PROJECT_DIR$/out/artifacts/TraVIS_v1_jar/TraVIS-v1.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/About.class" afterPath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/About.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Display.class" afterPath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Display.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Graph.class" afterPath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Graph.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Main.class" afterPath="$PROJECT_DIR$/out/production/TraVIS-v1/ph/edu/dlsu/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/TraVIS_v1_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/TraVIS_v1_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dat/Violation-Database.xlsx" afterPath="$PROJECT_DIR$/dat/Violation-Database.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TraVIS-v1.iml" afterPath="$PROJECT_DIR$/TraVIS-v1.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ph/edu/dlsu/About.java" afterPath="$PROJECT_DIR$/src/ph/edu/dlsu/About.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ph/edu/dlsu/Graph.java" afterPath="$PROJECT_DIR$/src/ph/edu/dlsu/Graph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ph/edu/dlsu/Main.java" afterPath="$PROJECT_DIR$/src/ph/edu/dlsu/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ph/edu/dlsu/Display.java" afterPath="$PROJECT_DIR$/src/ph/edu/dlsu/Display.java" />
     </list>
     <ignored path="TraVIS-v1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +41,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+            <state relative-caret-position="170">
+              <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
               <folding>
                 <element signature="method#start#0;class#Main#0" expanded="false" />
                 <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
@@ -70,13 +58,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="About.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/About.java">
+      <file leaf-file-name="Display.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="117" column="22" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
+            <state relative-caret-position="422">
+              <caret line="287" column="41" selection-start-line="287" selection-start-column="41" selection-end-line="287" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;class#Display#0" expanded="false" />
+                <element signature="e#9071#9113#0" expanded="false" />
+                <element signature="class#Item#0;class#Display#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -115,11 +106,11 @@
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/about.java" />
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/wViolationwNumber.java" />
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Utils.java" />
-        <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Display.java" />
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Facts.java" />
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Graph.java" />
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Main.java" />
         <option value="$PROJECT_DIR$/src/ph/edu/dlsu/About.java" />
+        <option value="$PROJECT_DIR$/src/ph/edu/dlsu/Display.java" />
       </list>
     </option>
   </component>
@@ -154,7 +145,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -249,8 +242,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -564,7 +555,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2056213" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.231454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.231454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -609,6 +600,34 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding>
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
+            <element signature="method#onHome#0;class#Main#0" expanded="false" />
+            <element signature="method#onAbout#0;class#Main#0" expanded="false" />
+            <element signature="method#onFacts#0;class#Main#0" expanded="false" />
+            <element signature="method#onGraph#0;class#Main#0" expanded="false" />
+            <element signature="e#7348#7406#0" expanded="false" />
+            <element signature="method#hasInternet#0;class#Main#0" expanded="false" />
+            <element signature="method#createFader#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/About.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2482">
@@ -660,8 +679,9 @@
         <state relative-caret-position="4709">
           <caret line="299" column="32" selection-start-line="299" selection-start-column="32" selection-end-line="299" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="e#9071#9113#0" expanded="false" />
             <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
@@ -698,8 +718,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="e#9071#9113#0" expanded="false" />
             <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
@@ -710,8 +731,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="e#9071#9113#0" expanded="false" />
             <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
@@ -722,8 +744,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="e#9071#9113#0" expanded="false" />
             <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
@@ -734,8 +757,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="e#9071#9113#0" expanded="false" />
             <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
@@ -746,8 +770,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="e#9071#9113#0" expanded="false" />
             <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
@@ -758,8 +783,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="e#9071#9113#0" expanded="false" />
             <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
@@ -1039,22 +1065,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Display.java">
+    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/About.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+        <state relative-caret-position="238">
+          <caret line="115" column="51" selection-start-line="115" selection-start-column="51" selection-end-line="115" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#Display#0" expanded="false" />
-            <element signature="class#Item#0;class#Display#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        <state relative-caret-position="170">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
           <folding>
             <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#initializeScreenSize#0;class#Main#0" expanded="false" />
@@ -1069,12 +1093,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/About.java">
+    <entry file="file://$PROJECT_DIR$/src/ph/edu/dlsu/Display.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="117" column="22" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
+        <state relative-caret-position="422">
+          <caret line="287" column="41" selection-start-line="287" selection-start-column="41" selection-end-line="287" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Display#0" expanded="false" />
+            <element signature="e#9071#9113#0" expanded="false" />
+            <element signature="class#Item#0;class#Display#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -115,6 +115,14 @@ public class About {
         Set<String> voices = marytts.getAvailableVoices();
         marytts.setVoice(voices.iterator().next());
 
+//        Set<String> voices = marytts.getAvailableVoices();
+//        for(String v : voices){
+//            System.out.println("Voice available: " + v);
+//        }
+//
+//        marytts.setVoice("bits1-hsmm");
+//        System.out.println("\nVOICE: " + voices.iterator().next() + "\n");
+
         inited = true;
     }
 
