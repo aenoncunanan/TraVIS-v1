@@ -1,5 +1,8 @@
 package ph.edu.dlsu;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.Parent;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
@@ -27,13 +30,8 @@ public class Graph {
     double displayWidth = screen.getDisplayWidth();
     double displayHeight = screen.getDisplayHeight();
 
-    int sheetCount = 0;
-    int speedCount = 0;
-    int swervingCount = 0;
-    int drunkCount = 0;
-    int counterflowingCount = 0;
-    int beatingCount = 0;
-    int colorCount = 0;
+    final ObservableList<Item> data =
+            FXCollections.observableArrayList();
 
     public Parent main(){
         Pane rootNode = new Pane();
@@ -60,45 +58,6 @@ public class Graph {
             e.printStackTrace();
         }
 
-        while (sheetCount < 6) {
-
-            XSSFSheet mySheet110 = myWorkBook.getSheetAt(sheetCount);
-
-            Iterator<Row> rowIterator110 = mySheet110.iterator();
-
-            //Traverse each row
-            rowIterator110.next();
-            while (rowIterator110.hasNext()) {
-                Row row = rowIterator110.next();
-                if (sheetCount == 0){
-                    speedCount++;
-                }
-                else if (sheetCount == 1){
-                    swervingCount++;
-                }
-                else if (sheetCount == 2){
-                    drunkCount++;
-                }
-                else if (sheetCount == 3){
-                    counterflowingCount++;
-                }
-                else if (sheetCount == 4){
-                    beatingCount++;
-                }
-                else if (sheetCount == 5){
-                    colorCount++;
-                }
-            }
-            sheetCount++;
-        }
-
-        final String speeding = "Speeding";
-        final String swerving = "Swerving";
-        final String drunk = "Drunk Driving";
-        final String counterflowing = "Counterflowing";
-        final String beating = "Beating the red light";
-        final String color = "Color Coding";
-
         final CategoryAxis xAxis = new CategoryAxis();
         final NumberAxis yAxis = new NumberAxis();
 
@@ -111,12 +70,23 @@ public class Graph {
         yAxis.setLabel("Number");
 
         XYChart.Series series = new XYChart.Series();
-        series.getData().add(new XYChart.Data(speeding, speedCount));
-        series.getData().add(new XYChart.Data(swerving, swervingCount));
-        series.getData().add(new XYChart.Data(drunk, drunkCount));
-        series.getData().add(new XYChart.Data(counterflowing, counterflowingCount));
-        series.getData().add(new XYChart.Data(beating, beatingCount));
-        series.getData().add(new XYChart.Data(color, colorCount));
+
+        for (int sheetCount = 0; sheetCount < myWorkBook.getNumberOfSheets(); sheetCount++){
+            int count = 0;
+            XSSFSheet mySheet110 = myWorkBook.getSheetAt(sheetCount);
+
+            Iterator<Row> rowIterator110 = mySheet110.iterator();
+
+            //Traverse each row
+            rowIterator110.next();
+            while (rowIterator110.hasNext()) {
+                Row row = rowIterator110.next();
+                count++;
+            }
+
+            data.add(new Item(myWorkBook.getSheetName(sheetCount)));
+            series.getData().add(new XYChart.Data(myWorkBook.getSheetName(sheetCount),count));
+        }
 
         bc.getData().addAll(series);
         bc.setTranslateX((displayWidth/2) - ((displayWidth/2)/2));
@@ -152,6 +122,23 @@ public class Graph {
         rootNode.getChildren().addAll(menuBox, bc);
 
         return rootNode;
+    }
+
+    public static class Item {
+        private final SimpleStringProperty violation;
+
+        private Item (String violation){
+            this.violation = new SimpleStringProperty(violation);
+        }
+
+        public String getViolation(){
+            return violation.get();
+        }
+
+        public void setViolation(String vio){
+            violation.set(vio);
+        }
+
     }
 
 }

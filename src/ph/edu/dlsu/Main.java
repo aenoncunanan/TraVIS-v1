@@ -221,25 +221,6 @@ public class Main extends Application{
         hasInternet();
 
         if(internet){
-
-//            String fileName = "Violation-Database.xlsx";
-//            URL link = new URL("https://drive.google.com/open?id=0B8qhMZ6t9O8ONVJRMnpMQVg2LUk");
-//
-//            InputStream in = new BufferedInputStream(link.openStream());
-//            ByteArrayOutputStream out = new ByteArrayOutputStream();
-//            byte[] buf = new byte[1024];
-//            int n = 0;
-//            while(-1 != (n = in.read(buf))){
-//                out.write(buf, 0, n);
-//            }
-//            out.close();
-//            in.close();
-//            byte[] response = out.toByteArray();
-//
-//            FileOutputStream fos = new FileOutputStream("dat/" + fileName);
-//            fos.write(response);
-//            fos.close();
-
             updated = true;
             internet = true;
         }

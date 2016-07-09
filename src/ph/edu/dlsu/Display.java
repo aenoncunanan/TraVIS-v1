@@ -44,8 +44,6 @@ public class Display {
     String date = "";
     String time = "";
 
-    int sheetNumber = 0;
-
     final TableView table = new TableView();
 
     final ObservableList<Item> data =
@@ -216,53 +214,6 @@ public class Display {
                 break;
             case "110":// All violations, no number
 
-//                while (sheetCount < 6) {
-//                    if (sheetCount == 0){
-//                        trafficViolation = "Speeding";
-//                    }
-//                    else if (sheetCount == 1){
-//                        trafficViolation = "Swerving";
-//                    }
-//                    else if (sheetCount == 2){
-//                        trafficViolation = "Drunk Driving";
-//                    }
-//                    else if (sheetCount == 3){
-//                        trafficViolation = "Counterflowing";
-//                    }
-//                    else if (sheetCount == 4){
-//                        trafficViolation = "Beating the red light";
-//                    }
-//                    else if (sheetCount == 5){
-//                        trafficViolation = "Color Coding";
-//                    }
-//
-//                    XSSFSheet mySheet110 = myWorkBook.getSheetAt(sheetCount);
-//
-//                    Iterator<Row> rowIterator110 = mySheet110.iterator();
-//
-//                    //Traverse each row
-//                    rowIterator110.next();
-//                    while (rowIterator110.hasNext()) {
-//                        Row row = rowIterator110.next();
-//                        //For each row, traverse each column
-//                        Iterator<Cell> cellIterator = row.cellIterator();
-//                        Cell cell = cellIterator.next();
-//                            while (cellIterator.hasNext()) {
-//                                plateNumber = cell.getStringCellValue();
-//                                cell = cellIterator.next();
-//                                vehicleClass = cell.getStringCellValue();
-//                                cell = cellIterator.next();
-//                                vehicleColor = cell.getStringCellValue();
-//                                cell = cellIterator.next();
-//                                date = cell.getStringCellValue();
-//                                cell = cellIterator.next();
-////                                time = cell.getStringCellValue();
-//                                time = String.valueOf((int)cell.getNumericCellValue());
-//                            }
-//                        data.add(new Item(trafficViolation, plateNumber, vehicleClass, vehicleColor, date, time));
-//                    }
-//                    sheetCount++;
-//                }
                 for(int i = 0; i < myWorkBook.getNumberOfSheets(); i++) {
                     trafficViolation = myWorkBook.getSheetName(i);
                     XSSFSheet mySheet110 = myWorkBook.getSheetAt(i);
