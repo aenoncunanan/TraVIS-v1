@@ -37,6 +37,7 @@ public class Utils {
             System.out.println("Failed to load image!");
         }
         return img;
+
     }
 
 }
