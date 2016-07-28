@@ -1191,5 +1191,315 @@ public class ViolationList {
                 "(D) 1,000.00\n3 Mos Sus of DL",
                 "(D) 1,000.00\n6 Mos Sus of DL"
         ));
+        data.add(new Facts.Item(
+                "REFUSAL TO RENDER SERVICE TO PUBLIC (PUV)",
+                "(D) 1,000.00\n1 Mo Sus of DL",
+                "(D) 1,000.00\n3 Mos Sus of DL",
+                "(D) 1,000.00\n6 Mos Sus of DL"
+        ));
+        data.add(new Facts.Item(
+                "REFUSAL TO RENDER SERVICE TO PUBLIC (TX)",
+                "(D) 1,000.00\n1 Mo Sus of DL",
+                "(D) 1,000.00\n3 Mos Sus of DL",
+                "(D) 1,000.00\n6 Mos Sus of DL"
+        ));
+        data.add(new Facts.Item(
+                "REVOKED CERT OF REGISTRATION",
+                "(O) 450.00\nIMP MV / CON PLT",
+                "(O) 450.00\nIMP MV / CON PLT",
+                "(O) 450.00\nIMP MV / CON PLT"
+        ));
+        data.add(new Facts.Item(
+                "Roof Tagging MMDA Resolution 11-02 series of 2011",
+                "(O) 500.00",
+                "(O) 500.00",
+                "(O) 500.00"
+        ));
+        data.add(new Facts.Item(
+                "SATURDAY TRAFFIC SCHEME",
+                "(D) 300.00",
+                "(D) 300.00",
+                "(D) 300.00"
+        ));
+        data.add(new Facts.Item(
+                "SMOKE BELCHING",
+                "(O) 200.00",
+                "(O) 200.00",
+                "(O) 200.00"
+        ));
+        data.add(new Facts.Item(
+                "SPORTING DAZZLING HEADLIGHTS\nNEON LIGHTS BROKEN LENS",
+                "(D) 500.00",
+                "(D) 500.00",
+                "(D) 500.00"
+        ));
+        data.add(new Facts.Item(
+                "STAINLESS / NICKLE / CHROME PLATED,\nSHINY VEHICLE PARTS",
+                "(D) 500.00",
+                "(D) 500.00",
+                "(D) 500.00"
+        ));
+        data.add(new Facts.Item(
+                "STALLED VEHICLE",
+                "(O) 200.00",
+                "(O) 200.00",
+                "(O) 200.00"
+        ));
+        data.add(new Facts.Item(
+                "STEREO BAN",
+                "(D) 1,000.00",
+                "(D) 1,000.00",
+                "(D) 1,000.00"
+        ));
+        data.add(new Facts.Item(
+                "STROBE / DANCING LIGHTS (FOR HIRE)",
+                "(O) 500.00",
+                "(O) 500.00",
+                "(O) 500.00"
+        ));
+        data.add(new Facts.Item(
+                "SUSPENDED CERT OF REGISTRATION",
+                "(D) 450.00\nIMP MV / CON PLT",
+                "(D) 450.00\nIMP MV / CON PLT",
+                "(D) 450.00\nIMP MV / CON PLT"
+        ));
+        data.add(new Facts.Item(
+                "TAMPERED SEALING WIRE",
+                "(D) 1 Mo Sus of DL\n(O) 1,000.00",
+                "(D) 3 Mo Sus of DL\n(O) 1,000.00",
+                "(D) 6 Mo Sus of DL\n(O) 1,000.00"
+        ));
+        data.add(new Facts.Item(
+                "TAMPERED TAXIMETER SEAL",
+                "(D) 3 Mo Sus of DL\n(O) 2,500.00",
+                "(D) 6 Mo Sus of DL\n(O) 3,000.00",
+                "(D) Rev of DL\n(O) 5,000.00\n(O) Rev of Fran"
+        ));
+        data.add(new Facts.Item(
+                "TAMPERED / MARKED PLATES",
+                "(O) 300.00",
+                "(O) 300.00",
+                "(O) 300.00"
+        ));
+        data.add(new Facts.Item(
+                "TAMPERED / MARKED STICKERS",
+                "(O) 300.00",
+                "(O) 300.00",
+                "(O) 300.00"
+        ));
+        data.add(new Facts.Item(
+                "TAMPERING OF OR / CR / CPC & OTHER DOCUMENTS\n" +
+                        "(SPURIOUS DOCUMENTS) - MMDA Reg. No. 97 - 004",
+                "(O) 5,000.00\n IMP MV 24HRS",
+                "(O) 5,000.00\n IMP MV 24HRS",
+                "(O) 5,000.00\n IMP MV 24HRS"
+        ));
+        data.add(new Facts.Item(
+                "TAMPERING OF OR / CR / CPC & OTHER DOCUMENTS\n" +
+                        "(SPURIOUS DOCUMENTS) - MMDA Reg. No. 97 - 004",
+                "(D) 1,000.00\n 3 Mos Sus DL",
+                "(D) 1,000.00\n 6 Mos Sus DL",
+                "(D) 1,000.00\n Rev of DL"
+        ));
+        data.add(new Facts.Item(
+                "TOURIST DRIVING MV UNREGISTERED IN PHIL",
+                "(D) 1,500.00",
+                "(D) 1,500.00",
+                "(D) 1,500.00"
+        ));
+        data.add(new Facts.Item(
+                "TRICYCLE BAN",
+                "(D) 100.00",
+                "(D) 100.00",
+                "(D) 100.00"
+        ));
+        data.add(new Facts.Item(
+                "TRUCK BAN",
+                "(D) 500.00",
+                "(D) 500.00",
+                "(D) 500.00"
+        ));
+        data.add(new Facts.Item(
+                "UNAUTHORIZED BELL / SIREN / EXHAUST WHISTLE",
+                "(O) 600.00\nCON / SIREN",
+                "(O) 600.00\nCON BELL / SIREN",
+                "(O) 600.00\nCON BELL / SIREN"
+        ));
+        data.add(new Facts.Item(
+                "UNAUTHORIZED FOR HIRE PLATES ON PRIVATE MV",
+                "(O) 1,500.00",
+                "(O) 1,500.00",
+                "(O) 1,500.00"
+        ));
+        data.add(new Facts.Item(
+                "UNAUTHORIZED CHANGE OF COLOR / CONFIGURATION",
+                "(O) 500.00",
+                "(O) 500.00",
+                "(O) 500.00"
+        ));
+        data.add(new Facts.Item(
+                "UNAUTHORIZED COMML / BUSS / TRADE NAME (TX)",
+                "(O) 375.00",
+                "(O) 375.00",
+                "(O) 375.00"
+        ));
+        data.add(new Facts.Item(
+                "UNAUTHORIZED IMPROVISED PLATES",
+                "(O) 150.00",
+                "(O) 150.00",
+                "(O) 150.00"
+        ));
+        data.add(new Facts.Item(
+                "UNDERCHARGING (W/CONDUCTOR)",
+                "(O) 500.00\n(C) 500.00",
+                "(O) 500.00\n(C) 500.00\n(C) 1 Mo Sus of CL",
+                "(O) 500.00\n(C) 500.00\n(C) 1 Mo Sus of CL"
+        ));
+        data.add(new Facts.Item(
+                "UNDERCHARGING (W/O CONDUCTOR)",
+                "(D) 500.00\n\n(O) 500.00",
+                "(D) 500.00\n1 Mo Sus of DL\n(O) 500.00",
+                "(D) 500.00\n1 Mo Sus of DL\n(O) 500.00"
+        ));
+        data.add(new Facts.Item(
+                "UNDUE PREFERENCE / UNJUST DISCRIMINATION",
+                "(D) 500.00\n1 Mo Sus of DL",
+                "(D) 500.00\n1 Mo Sus of DL",
+                "(D) 500.00\n1 Mo Sus of DL"
+        ));
+        data.add(new Facts.Item(
+                "UNIFIED VEHICLE VOLUME REDUCTION PROGRAM",
+                "(D) 300.00",
+                "(D) 300.00",
+                "(D) 300.00"
+        ));
+        data.add(new Facts.Item(
+                "UNLICENSED CONDUCTOR",
+                "(C) 300.00",
+                "(C) 300.00",
+                "(C) 300.00"
+        ));
+        data.add(new Facts.Item(
+                "UNREGISTERED MOTOR VEHICLE",
+                "(D) 450.00",
+                "(D) 450.00",
+                "(D) 450.00"
+        ));
+        data.add(new Facts.Item(
+                "UNREGISTERED MOTOR VEHICLE",
+                "(O) 450.00",
+                "(O) 450.00",
+                "(O) 450.00"
+        ));
+        data.add(new Facts.Item(
+                "UNREGISTERED SUBS / REPLACEMENT ENGINE",
+                "(D) 500.00\nImp of MV",
+                "(D) 500.00\nImp of MV",
+                "(D) 500.00\nImp of MV"
+        ));
+        data.add(new Facts.Item(
+                "UNSAFE LOAD / CARGO",
+                "(D) 150.00",
+                "(D) 150.00",
+                "(D) 150.00"
+        ));
+        data.add(new Facts.Item(
+                "USING MV IN COMMISSION OF CRIME",
+                "(D) 10,000.00\nRev of DL",
+                "-",
+                "-"
+        ));
+        data.add(new Facts.Item(
+                "VIOLATION OF COLOR SCHEME",
+                "(O) 375.00",
+                "(O) 375.00",
+                "(O) 375.00"
+        ));
+        data.add(new Facts.Item(
+                "VIOLATION OF COMMEMORATIVE PLATE RULES & REGULATIONS",
+                "(O) 5,000.00",
+                "(O) 5,000.00",
+                "(O) 5,000.00"
+        ));
+        data.add(new Facts.Item(
+                "Speed Limit - PASAY & PARANAQUE (Macapagal Ave.)\n" +
+                        "MMDA MC No. 14-11",
+                "(D) 1,000.00",
+                "(D) 1,000.00",
+                "(D) 1,000.00"
+        ));
+        data.add(new Facts.Item(
+                "TOWING FEE STALLED / ILLEGALLY PARKED (HEAVY VEHICLES)",
+                "(D) 4,500.00",
+                "(D) 4,500.00",
+                "(D) 4,500.00"
+        ));
+        data.add(new Facts.Item(
+                "TOWING FEE STALLED / ILLEGALLY PARKED (MEDIUM VEHICLES)",
+                "(D) 2,500.00",
+                "(D) 2,500.00",
+                "(D) 2,500.00"
+        ));
+        data.add(new Facts.Item(
+                "TOWING FEE STALLED / ILLEGALLY PARKED (LIGHT VEHICLES)",
+                "(D) 1,500.00",
+                "(D) 1,500.00",
+                "(D) 1,500.00"
+        ));
+        data.add(new Facts.Item(
+                "LOADING / UNLOADING IN PROHIBITED ZONE\n" +
+                        "( as of July 12, 2012) (MC 08 - 12)",
+                "(D) 500.00",
+                "(D) 500.00",
+                "(D) 500.00"
+        ));
+        data.add(new Facts.Item(
+                "OPEN DOOR (W/CONDUCTOR)\n" +
+                        "( as of July 12, 2012) (MC 08 - 12)",
+                "(C) 1,00.00",
+                "(C) 1,000.00",
+                "(C) 1,000.00"
+        ));
+        data.add(new Facts.Item(
+                "OPEN DOOR (W/O CONDUCTOR)\n" +
+                        "( as of July 12, 2012) (MC 08 - 12)",
+                "(D) 1,000.00",
+                "(D) 1,000.00",
+                "(D) 1,000.00"
+        ));
+        data.add(new Facts.Item(
+                "BUS / PUJ LANE ORDINANCE\n" +
+                        "( as of July 12, 2012) (MC 08 - 12)",
+                "(D) 500.00",
+                "(D) 500.00",
+                "(D) 500.00"
+        ));
+        data.add(new Facts.Item(
+                "BUSES WITH DEFECTIVE DOORS\n" +
+                        "( as of July 12, 2012) (MC 08 - 12)",
+                "(D) 1,000.00",
+                "(D) 1,000.00",
+                "(D) 1,000.00"
+        ));
+        data.add(new Facts.Item(
+                "BUS SEGREGATION SCHEME\n" +
+                        "( as of July 12, 2012) (MC 08 - 12)",
+                "(D) 1,000.00",
+                "(D) 1,000.00",
+                "(D) 1,000.00"
+        ));
+        data.add(new Facts.Item(
+                "Marikina City Ordinance",
+                "(D) 1,000.00",
+                "(D) 1,000.00",
+                "(D) 1,000.00"
+        ));
+        data.add(new Facts.Item(
+                "Failure to Register Motorcycle Helmet,\n" +
+                        "Marikina City Ord # 43",
+                "(D) 500.00",
+                "(D) 2,000.00",
+                "(D) 2,000.00"
+        ));
     }
 }

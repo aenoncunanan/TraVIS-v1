@@ -31,6 +31,9 @@ public class About {
     double displayWidth = screen.getDisplayWidth();
     double displayHeight = screen.getDisplayHeight();
 
+    private static AudioInputStream audio = null;
+    private static AudioPlayer player = null;
+
     public Parent main(){
         Pane rootNode = new Pane();
         rootNode.setPrefSize(displayWidth, displayHeight);
@@ -46,17 +49,31 @@ public class About {
         grid.setVgap(10);
         grid.setPadding(new Insets(25, 25, 25, 25));
 
+        player = new AudioPlayer();
+        player.cancel();
+
         Text message = new Text();
-        message.setText("Number of people having cars are increasing nowadays, making the roads more busy." +
-                "\nBusy road can cause drivers to commit traffic violation whether it is intentional or not." +
-                "\nTo help people review the violations that have been committed, the traffic violation" +
-                "\ninformation system or TraVIS, can be used. TraVIS is a system that interacts with a" +
-                "\nuser using a graphical user interface (GUI) to help them monitor the violations that" +
-                "\nhave been committed in a particular day. TraVIS can show the user what type of vehicle" +
-                "\ncommitted the violation, plate number, color of the vehicle, and the date and time of" +
-                "\nwhen it was committed." +
-                "\n\nThis program was made by a Computer Engineering students of De La Salle University, " +
-                "\nScience and Technology Complex that serves as a partial completion of the course, System" +
+//        message.setText("Number of people having cars are increasing nowadays, making the roads more busy." +
+//                "\nBusy road can cause drivers to commit traffic violation whether it is intentional or not." +
+//                "\nTo help people review the violations that have been committed, the traffic violation" +
+//                "\ninformation system or TraVIS, can be used. TraVIS is a system that interacts with a" +
+//                "\nuser using a graphical user interface (GUI) to help them monitor the violations that" +
+//                "\nhave been committed in a particular day. TraVIS can show the user what type of vehicle" +
+//                "\ncommitted the violation, plate number, color of the vehicle, and the date and time of" +
+//                "\nwhen it was committed." +
+//                "\n\nThis program was made by a Computer Engineering students of De La Salle University, " +
+//                "\nScience and Technology Complex that serves as a partial completion of the course, System" +
+//                "\nAnalysis and Design.");
+        message.setText("Hi! I'm Travis! Your Traffic Violation Information System!" +
+                "\nI can help you monitor or review the traffic violations that have been committed." +
+                "\nI can show you the information like the plate number of the vehicle, color of the vehicle," +
+                "\nclass or type of the vehicle, the date of when the violation was committed, the place or" +
+                "\nlocation of where the violation was committed, and the corresponding penalty given to the" +
+                "\nviolator. I can show those information through a table. I can also show the number of violations" +
+                "\ncommitted in a particular month, week, or day, or even all of the violations committed from the" +
+                "\nstart, through the use of a graph." +
+                "\n\nI was developed by a Computer Engineering students of De La Salle University, " +
+                "\nScience and Technology Complex that serves as their partial completion of their course, System" +
                 "\nAnalysis and Design.");
         message.setTextAlignment(TextAlignment.CENTER);
         grid.add(message, 0, 1);
@@ -80,18 +97,30 @@ public class About {
         final CustomMenuItem close = new CustomMenuItem("close");
 
         home.setOnMouseClicked(event -> {
+            if (player.isAlive()){
+                player.cancel();
+            }
             Main.onHome();
         });
 
         facts.setOnMouseClicked(event -> {
+            if (player.isAlive()){
+                player.cancel();
+            }
             Main.onFacts();
         });
 
         graph.setOnMouseClicked(event -> {
+            if (player.isAlive()){
+                player.cancel();
+            }
             Main.onGraph();
         });
 
         close.setOnMouseClicked(event ->{
+            if (player.isAlive()){
+                player.cancel();
+            }
             Main.onExit();
         });
 
@@ -137,8 +166,11 @@ public class About {
                 return;
             }
 
-            AudioInputStream audio = marytts.generateAudio(comment);
-            AudioPlayer player = new AudioPlayer(audio);
+            audio = marytts.generateAudio(comment);
+            player = new AudioPlayer(audio);
+
+//            AudioInputStream audio = marytts.generateAudio(comment);
+//            AudioPlayer player = new AudioPlayer(audio);
             player.start();
         } catch (MaryConfigurationException |
                 SynthesisException e) {
